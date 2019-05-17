@@ -22,5 +22,5 @@ spec:
         name: reverse-proxy
         restartPolicy: Always
       imagePullSecrets:
-        - name: demo_mtc_secret
+        - name: demo-mtc-secret
 status: {}
