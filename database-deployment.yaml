@@ -30,7 +30,7 @@ spec:
         ports:
         - containerPort: 5432
         resources: {}
-        imagePullSecrets:
+      imagePullSecrets:
         - name: demo-mtc-secret
       restartPolicy: Always
 status: {}

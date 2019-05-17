@@ -21,6 +21,6 @@ spec:
       - image: acrdockerdemomtc.azurecr.io/reverse-proxy
         name: reverse-proxy
         restartPolicy: Always
-      imagePullSecrets:
+        imagePullSecrets:
         - name: demo-mtc-secret
 status: {}

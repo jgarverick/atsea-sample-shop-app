@@ -23,5 +23,5 @@ spec:
         resources: {}
       restartPolicy: Always
       imagePullSecrets:
-        - name: demo_-tc-secret
+        - name: demo-mtc-secret
 status: {}
