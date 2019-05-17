@@ -1,0 +1,26 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.18.0 ()
+  creationTimestamp: null
+  labels:
+    io.kompose.service: reverse-proxy
+  name: reverse-proxy
+spec:
+  replicas: 1
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        io.kompose.service: reverse-proxy
+    spec:
+      containers:
+      - image: acrdockerdemomtc.azurecr.io/reverse-proxy
+        name: reverse-proxy
+        restartPolicy: Always
+      imagePullSecrets:
+        - name: demo_mtc_secret
+status: {}

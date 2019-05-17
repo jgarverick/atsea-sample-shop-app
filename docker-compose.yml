@@ -4,6 +4,7 @@ services:
   reverse_proxy:
     build: ./reverse_proxy
     user: nginx
+    name: reverse_proxy
 
   database:
     build: 
@@ -39,6 +40,7 @@ services:
   payment_gateway:
     build:
       context: payment_gateway
+    name: payment_gateway
     networks:
       - payment
     secrets:
